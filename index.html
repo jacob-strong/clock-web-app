@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Clock</title>
+    <link href="https://unpkg.com/gridstack/dist/gridstack.min.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/gridstack/dist/gridstack-all.js"></script>
+    <link rel="stylesheet" href="clock.css">
+    <script src="clock.js" defer></script>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <div class="grid-stack">
+            <!-- Stopwatch -->
+            <div class="grid-stack-item" gs-x="0" gs-y="0" gs-w="1" gs-h="1">
+                <div class="grid-stack-item-content" id="widget1">
+                    <header><h2>Stopwatch</h2></header>
+                    <div class="content stopwatch">
+                        <span id="stopwatch-display">00:00:00</span>
+                        <div class="controls">
+                            <button id="start-stopwatch">Start</button>
+                            <button id="reset-stopwatch">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timer -->
+            <div class="grid-stack-item" gs-x="1" gs-y="0" gs-w="1" gs-h="1">
+                <div class="grid-stack-item-content" id="widget2">
+                    <header><h2>Timer</h2></header>
+                    <div class="content timer">
+                        <input type="number" id="timer-minutes" placeholder="Min" min="0" />
+                        <button id="start-timer">Start</button>
+                        <div id="timer-display">00:00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- World Clock -->
+            <div class="grid-stack-item" gs-x="0" gs-y="1" gs-w="1" gs-h="1">
+                <div class="grid-stack-item-content" id="widget3">
+                    <header><h2>World Clock</h2></header>
+                    <div class="content clock">
+                        <select id="timezone">
+                            <option value="UTC">UTC</option>
+                            <option value="America/New_York">New York</option>
+                            <option value="Europe/London">London</option>
+                            <option value="Asia/Tokyo">Tokyo</option>
+                        </select>
+                        <div id="clock-display">--:--:--</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Widget -->
+            <!--<div class="grid-stack-item" gs-x="1" gs-y="1" gs-w="1" gs-h="1">
+                <div class="grid-stack-item-content" id="widget4">
+                    <header><h2>Empty</h2></header>
+                    <div class="content">--</div>
+                </div>
+            </div> -->
+        </div>
+    </main>
+</body>
+</html>
